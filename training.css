@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* navBar edit */
+/* edit for nav bar */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* border: 2px solid hsl(300, 100%, 25%); */
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(46, 44, 44); /* Purple background */
+    color: #FFFFFF;
+    padding: 2px 10px;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+nav ul .navListing {
+    list-style: none;
+    padding: 8px;
+    margin-right: 10px;
+}
+/* .navListing:hover {
+    border: 1px solid hsl(300, 100%, 35%);
+} */
+nav ul .navListingLink {
+    text-decoration: none;
+    font-weight: bold;
+    color: #f7f7f7;
+}
+.navListingLink:hover {
+    color: rgb(100, 100, 100);
+}
+.navListingLink:active {
+    color: rgb(214, 135, 16);
+}
+.contactBtn {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.0);
+    font-weight: bold;
+    border: 1px solid hsl(300, 100%, 35%);
+    transition: background-color 1s;
+}
+.contactBtn:hover {
+    background-color: #0f0f0f;
+    color: white;
+}
+.contactBtn a {
+    font-weight: bold;
+    text-decoration: none;
+    color: hsl(300, 100%, 35%);
+    font-family: cursive;
+}
+/* .contactBtn a:hover {
+     color: #ddd; 
+} */
+.contactBtn:active {
+    background-color: hsl(300, 100%, 35%);
+    /* color: white; */
+}
+
+.logo {
+    display: inline;
+    width: 80px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    font-weight: bold;
+    color: rgb(100, 100, 100);
+}
+
+#menu {
+    display: none;
+}
+#closeMenu {
+    display: none;
+    background-color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+#menu {
+    margin: auto;
+    height: 50px;
+    border: 1px solid hsl(300, 100%, 35%);
+    background-color: rgba(255, 255, 255, 0.0);
+    padding: 5px;
+    border-radius: 2px;
+    font-weight: bold;
+    color: hsl(300, 100%, 45%);
+}
+#menu:hover {
+    background-color: #0f0f0f;
+    /* color: white; */
+}
+@media (max-width: 850px) {
+    nav ul  {
+        display: none;
+    }
+    #menu {
+        display: inline;
+    }
+}
+/* navBar edit stop here */
+
+.comingSoonDiv {
+    margin: 100px;
+    /* padding: 50px; */
+}
+
+/* this is call to action box */
+.CTA-Box {
+    border: 2px solid;
+    width: 50%;
+    height: 250px;
+    text-align: center;
+    margin: 20px auto;
+    color: white;
+    background-color: rgb(15, 15, 15);
+    padding: 10px;
+}
+
+.CTA-Box h3 {
+    margin-top: 50px;
+}
+.CTA-Box button {
+    margin-top: 70px;
+    padding: 10px;
+    color: rgb(194, 188, 188);
+    background-color: rgba(194, 188, 188, 0);
+    font-weight: bold;
+    border: 1px solid rgb(194, 188, 188);
+    transition: background-color 1s;
+}
+.CTA-Box button a {
+    color: rgb(194, 188, 188);
+    font-weight: bold;
+    text-decoration: none;
+}
+.CTA-Box button:hover {
+    background-color: hsl(300, 100%, 35%);
+    color: rgb(233, 225, 225);
+}
+
+/* this is the footer edit */
+footer {
+    text-align: center;
+    background-color: rgb(46, 44, 44);
+    padding: 50px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+footer hr {
+    margin-bottom: 20px;
+}
+footer h4 {
+    color: hsl(300, 100%, 35%);  
+}
+footer p {
+    font-size: 0.75rem;
+    padding: 5px;
+    margin-bottom: 5px;
+    color: #9e9999;
+}
+.footerFlex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 2rem;
+    margin-bottom: 30px;
+}
+.footerFlex li {
+    list-style: none;
+    padding: 5px;
+    color: #ddd;
+}
+.footerFlex li a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: bold;
+}
+.footerContactDiv {
+    margin-bottom: 30px;
+}
+.footerContactDiv {
+    margin-bottom: 30px;
+}
+.socialIconsDiv {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 20px;
+}
+.socialIconsDiv img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.footerContactDiv a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #e0400f;
+}
+.footerContactDiv p {
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+/* footer edit stops here */

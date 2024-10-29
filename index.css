@@ -1,0 +1,417 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: hsl(0, 3%, 70%);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0f0f0f;
+}
+h1, h2, h3 {
+    color: hsl(300, 100%, 65%);
+} 
+/* edit for nav bar */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* border: 2px solid hsl(300, 100%, 25%); */
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(46, 44, 44); /* Purple background */
+    color: #FFFFFF;
+    padding: 2px 10px;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+nav ul .navListing {
+    list-style: none;
+    padding: 8px;
+    margin-right: 10px;
+}
+/* .navListing:hover {
+    border: 1px solid hsl(300, 100%, 35%);
+} */
+nav ul .navListingLink {
+    text-decoration: none;
+    font-weight: bold;
+    color: #f7f7f7;
+}
+.navListingLink:hover {
+    color: rgb(100, 100, 100);
+}
+.navListingLink:active {
+    color: rgb(214, 135, 16);
+}
+.contactBtn {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.0);
+    font-weight: bold;
+    border: 1px solid hsl(300, 100%, 35%);
+    transition: background-color 1s;
+}
+.contactBtn a {
+    font-weight: bold;
+    text-decoration: none;
+    color: hsl(300, 100%, 35%);
+    font-family: cursive;
+}
+/* .contactBtn a:hover {
+     color: #ddd; 
+} */
+.contactBtn:hover {
+    background-color: #0f0f0f;
+    color: white;
+}
+.contactBtn:active {
+    background-color: hsl(300, 100%, 35%);
+    /* color: white; */
+}
+/* edit for header with background image */
+header {
+    background-image: url(headerBackground.jpeg);
+    background-size: cover;
+    max-width: 100%;
+    height: 800px;
+    background-attachment: fixed;
+    background-color: black;
+    text-align: center;
+    padding: 100px;
+    padding-left: 60px;
+}
+h1 {
+   color: rgb(8, 8, 8); 
+   text-align: center;
+   /* position: absolute;
+   top: 300px; */
+   font-size: 2rem;
+}
+
+/* first section with p edit */
+.firstSection {
+    padding: 20px;
+    text-align: center;
+}
+.firstSection h2 {
+    width: 200px;
+    text-align: center;
+    margin: 50px auto;
+    letter-spacing: 1px;
+}
+.firstSection p {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    /* color: #333333; */
+}
+/* second section that tells story with pics */
+.imageTellingStory1 img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.imageTellingStory1 img:hover, .imageTellingStory2 img:hover, .imageTellingStory3 img:hover {
+    transform: scale(1.1);
+}
+.noteTellingStory1 {
+    width: 200px;
+}
+.noteTellingStory1 p {
+    text-align: justify;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.imageTellingStory2 img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.noteTellingStory2 {
+    width: 200px;
+}
+.noteTellingStory2 p {
+    text-align: justify;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.imageTellingStory3 img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.noteTellingStory3 {
+    width: 200px;
+}
+.noteTellingStory3 p {
+    text-align: justify;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+/* i added flex to the div holding the stories */
+.storyWithPic {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 2rem;
+    margin-bottom: 100px;
+}
+/* this is copied from ai */
+.carouselBox {
+    text-align: center;
+}
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 50px auto;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    min-width: 100%;
+    height: 400px;
+    display: none;
+    object-fit: cover;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+button.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+.corouselHeader {
+    text-align: center;
+    padding: 5px;
+    margin-top: 15px;
+}
+.seeMore {
+    margin-top: 0;
+    padding: 10px;
+    color: rgb(194, 188, 188);
+    background-color: rgba(194, 188, 188, 0);
+    font-weight: bold;
+    border: 1px solid rgb(194, 188, 188);
+    transition: background-color 1s;
+    margin-bottom: 80px;
+}
+.seeMore a {
+    color: rgb(155, 151, 151);
+    font-weight: bold;
+    text-decoration: none;
+}
+.seeMore:hover {
+    background-color: hsl(300, 56%, 40%);
+    color: rgb(233, 225, 225);
+}
+/* testimonial section */
+.thirdSection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 2rem;
+    text-align: center;
+}
+.testimonialNote {
+    width: 300px;
+    padding: 50px 20px;
+}
+.testimonialImg img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+h2 {
+    width: 100%;
+}
+/* this is call to action box */
+.CTA-Box {
+    border: 2px solid;
+    width: 50%;
+    height: 250px;
+    text-align: center;
+    margin: 20px auto;
+    color: white;
+    background-color: rgb(15, 15, 15);
+    padding: 10px;
+}
+.CTA-Box h3 {
+    margin-top: 50px;
+}
+.CTA-Box button {
+    margin-top: 70px;
+    padding: 10px;
+    color: rgb(194, 188, 188);
+    background-color: rgba(194, 188, 188, 0);
+    font-weight: bold;
+    border: 1px solid rgb(194, 188, 188);
+    transition: background-color 1s;
+}
+.CTA-Box button a {
+    color: rgb(194, 188, 188);
+    font-weight: bold;
+    text-decoration: none;
+}
+.CTA-Box button:hover {
+    background-color: hsl(300, 100%, 35%);
+    color: rgb(233, 225, 225);
+}
+
+/* logo design*/
+.logo {
+    display: inline;
+    width: 80px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    font-weight: bold;
+    color: rgb(100, 100, 100);
+}
+/* this is the footer edit */
+footer {
+    text-align: center;
+    background-color: rgb(46, 44, 44);
+    padding: 50px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+footer hr {
+    margin-bottom: 20px;
+}
+footer h4 {
+    color: hsl(300, 100%, 35%);  
+}
+footer p {
+    font-size: 0.75rem;
+    padding: 5px;
+    margin-bottom: 5px;
+    color: #9e9999;
+}
+.footerFlex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 2rem;
+    margin-bottom: 30px;
+}
+.footerFlex li {
+    list-style: none;
+    padding: 5px;
+    color: #ddd;
+}
+.footerFlex li a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: bold;
+}
+.footerContactDiv {
+    margin-bottom: 30px;
+}
+.footerContactDiv {
+    margin-bottom: 30px;
+}
+.socialIconsDiv {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 20px;
+}
+.socialIconsDiv img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.footerContactDiv a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #e0400f;
+}
+.footerContactDiv p {
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+/* footer edit stops here */
+/* menu button edit */
+#menu {
+    display: none;
+}
+#closeMenu {
+    display: none;
+    background-color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+#menu {
+    margin: auto;
+    height: 50px;
+    border: 1px solid hsl(300, 100%, 35%);
+    background-color: rgba(255, 255, 255, 0.0);
+    padding: 5px;
+    border-radius: 2px;
+    font-weight: bold;
+    color: hsl(300, 100%, 45%);
+}
+#menu:hover {
+    background-color: #0f0f0f;
+    /* color: white; */
+}
+@media (max-width: 850px) {
+    nav ul  {
+        display: none;
+    }
+    #menu {
+        display: inline;
+    }
+    header h1 {
+        font-size: 45px;
+    }
+    header {
+        text-align: left;
+    }
+    h1 {
+        font-size: 0px;
+       text-align: left;
+       
+    }
+}
+@media (min-width: 1243px) {
+    header h1 {
+        position: absolute;
+        left: 350px;
+    }
+}
